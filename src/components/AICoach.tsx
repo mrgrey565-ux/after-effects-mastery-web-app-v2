@@ -1,3 +1,4 @@
+import ReactMarkdown from 'react-markdown';
 import { useState } from 'react';
 import { Send, Bot, Copy } from 'lucide-react';
 import { useAppStore, getApiKey } from '../store/appStore';
@@ -251,14 +252,19 @@ export default function AICoach() {
               }`}>
                 {msg.role === 'user' ? 'You' : <Bot size={14} />}
               </div>
-              <div className={`flex-1 max-w-[85%] ${msg.role === 'user' ? 'text-right' : ''}`}>
-                <div className={`inline-block px-4 py-3 rounded-xl text-sm leading-relaxed whitespace-pre-wrap ${
-                  msg.role === 'user'
-                    ? 'bg-purple-600 text-white'
-                    : 'bg-gray-800 text-gray-200'
-                }`}>
-                  {msg.content}
-                </div>
+              <div className={`inline-block px-4 py-3 rounded-xl text-sm leading-relaxed overflow-x-auto ${
+  msg.role === 'user'
+    ? 'bg-purple-600 text-white whitespace-pre-wrap'
+    : 'bg-gray-800 text-gray-200 w-full'
+}`}>
+  {msg.role === 'user' ? (
+    msg.content
+  ) : (
+    <ReactMarkdown className="markdown-body">
+      {msg.content}
+    </ReactMarkdown>
+  )}
+</div>          <div className={`inline-block px-4 py-3 rounded-xl text-sm leading-relaxed whitespace-pre-wrap ${
                 {msg.role === 'assistant' && (
                   <div className="flex gap-2 mt-1">
                     <button
