@@ -1,0 +1,141 @@
+export interface ToolDefinition {
+  tool: string;
+  category: string;
+}
+
+export const toolCategories = [
+  'Interface & Workflow',
+  'Animation Core',
+  'Text & Shape Motion',
+  'Compositing & Layer Control',
+  'Effects',
+  '3D & Camera',
+  'Tracking, Roto & VFX',
+  'Expressions & Templates',
+  'Audio & Export',
+];
+
+export const allTools: ToolDefinition[] = [
+  // Interface & Workflow
+  { tool: 'Workspace panels', category: 'Interface & Workflow' },
+  { tool: 'Project panel', category: 'Interface & Workflow' },
+  { tool: 'Composition settings', category: 'Interface & Workflow' },
+  { tool: 'Timeline', category: 'Interface & Workflow' },
+  { tool: 'Preview panel', category: 'Interface & Workflow' },
+  { tool: 'Layer switches/modes', category: 'Interface & Workflow' },
+  { tool: 'Preferences', category: 'Interface & Workflow' },
+  { tool: 'Keyboard shortcuts', category: 'Interface & Workflow' },
+  { tool: 'Project organization', category: 'Interface & Workflow' },
+  { tool: 'Collect Files', category: 'Interface & Workflow' },
+  { tool: 'Proxies', category: 'Interface & Workflow' },
+  { tool: 'Render Queue', category: 'Interface & Workflow' },
+  { tool: 'Adobe Media Encoder', category: 'Interface & Workflow' },
+
+  // Animation Core
+  { tool: 'Transform properties', category: 'Animation Core' },
+  { tool: 'Anchor point', category: 'Animation Core' },
+  { tool: 'Keyframes', category: 'Animation Core' },
+  { tool: 'Easy Ease', category: 'Animation Core' },
+  { tool: 'Graph Editor', category: 'Animation Core' },
+  { tool: 'Speed graph', category: 'Animation Core' },
+  { tool: 'Value graph', category: 'Animation Core' },
+  { tool: 'Spatial interpolation', category: 'Animation Core' },
+  { tool: 'Motion paths', category: 'Animation Core' },
+  { tool: 'Motion blur', category: 'Animation Core' },
+  { tool: 'Frame rate/shutter angle', category: 'Animation Core' },
+
+  // Text & Shape Motion
+  { tool: 'Text layers', category: 'Text & Shape Motion' },
+  { tool: 'Character/paragraph controls', category: 'Text & Shape Motion' },
+  { tool: 'Text animators', category: 'Text & Shape Motion' },
+  { tool: 'Range selectors', category: 'Text & Shape Motion' },
+  { tool: 'Shape layers', category: 'Text & Shape Motion' },
+  { tool: 'Paths', category: 'Text & Shape Motion' },
+  { tool: 'Strokes/fills', category: 'Text & Shape Motion' },
+  { tool: 'Trim Paths', category: 'Text & Shape Motion' },
+  { tool: 'Repeaters', category: 'Text & Shape Motion' },
+  { tool: 'Merge Paths', category: 'Text & Shape Motion' },
+  { tool: 'Lower thirds', category: 'Text & Shape Motion' },
+  { tool: 'Captions/subtitles', category: 'Text & Shape Motion' },
+  { tool: 'Kinetic typography', category: 'Text & Shape Motion' },
+
+  // Compositing & Layer Control
+  { tool: 'Precomps', category: 'Compositing & Layer Control' },
+  { tool: 'Parenting', category: 'Compositing & Layer Control' },
+  { tool: 'Null objects', category: 'Compositing & Layer Control' },
+  { tool: 'Adjustment layers', category: 'Compositing & Layer Control' },
+  { tool: 'Blending modes', category: 'Compositing & Layer Control' },
+  { tool: 'Masks', category: 'Compositing & Layer Control' },
+  { tool: 'Mask feather/expansion', category: 'Compositing & Layer Control' },
+  { tool: 'Alpha mattes', category: 'Compositing & Layer Control' },
+  { tool: 'Luma mattes', category: 'Compositing & Layer Control' },
+  { tool: 'Track matte workflows', category: 'Compositing & Layer Control' },
+  { tool: 'Color matching', category: 'Compositing & Layer Control' },
+  { tool: 'Grain/noise', category: 'Compositing & Layer Control' },
+  { tool: 'Shadows', category: 'Compositing & Layer Control' },
+  { tool: 'Light wrap concept', category: 'Compositing & Layer Control' },
+
+  // Effects
+  { tool: 'Lumetri Color', category: 'Effects' },
+  { tool: 'Glow', category: 'Effects' },
+  { tool: 'Gaussian Blur/Fast Box Blur', category: 'Effects' },
+  { tool: 'Directional Blur', category: 'Effects' },
+  { tool: 'Motion Tile', category: 'Effects' },
+  { tool: 'Fractal Noise', category: 'Effects' },
+  { tool: 'Turbulent Displace', category: 'Effects' },
+  { tool: 'Displacement Map', category: 'Effects' },
+  { tool: 'CC Particle World', category: 'Effects' },
+  { tool: 'CC Light Rays / Light Sweep', category: 'Effects' },
+  { tool: 'Keylight', category: 'Effects' },
+  { tool: 'Camera Lens Blur', category: 'Effects' },
+  { tool: 'Noise/Grain effect', category: 'Effects' },
+  { tool: 'Sharpen', category: 'Effects' },
+  { tool: 'Fill/Tint/Tritone', category: 'Effects' },
+  { tool: 'Drop Shadow', category: 'Effects' },
+
+  // 3D & Camera
+  { tool: '3D layers', category: '3D & Camera' },
+  { tool: 'Cameras', category: '3D & Camera' },
+  { tool: 'Null camera rig', category: '3D & Camera' },
+  { tool: 'Lights', category: '3D & Camera' },
+  { tool: 'Z-depth layout', category: '3D & Camera' },
+  { tool: '2.5D parallax', category: '3D & Camera' },
+  { tool: '3D text/layers', category: '3D & Camera' },
+  { tool: '3D Camera Tracker', category: '3D & Camera' },
+
+  // Tracking, Roto & VFX
+  { tool: 'Point tracking', category: 'Tracking, Roto & VFX' },
+  { tool: 'Stabilize motion', category: 'Tracking, Roto & VFX' },
+  { tool: 'Track to null', category: 'Tracking, Roto & VFX' },
+  { tool: 'Mocha AE planar tracking', category: 'Tracking, Roto & VFX' },
+  { tool: 'Corner pin', category: 'Tracking, Roto & VFX' },
+  { tool: 'Screen replacement', category: 'Tracking, Roto & VFX' },
+  { tool: 'Roto Brush', category: 'Tracking, Roto & VFX' },
+  { tool: 'Refine Edge', category: 'Tracking, Roto & VFX' },
+  { tool: 'Manual rotoscoping masks', category: 'Tracking, Roto & VFX' },
+  { tool: 'Keylight green screen', category: 'Tracking, Roto & VFX' },
+  { tool: 'Composite realism pass', category: 'Tracking, Roto & VFX' },
+
+  // Expressions & Templates
+  { tool: 'wiggle()', category: 'Expressions & Templates' },
+  { tool: 'loopOut()', category: 'Expressions & Templates' },
+  { tool: 'time expression', category: 'Expressions & Templates' },
+  { tool: 'valueAtTime()', category: 'Expressions & Templates' },
+  { tool: 'linear/ease expressions', category: 'Expressions & Templates' },
+  { tool: 'Slider Control', category: 'Expressions & Templates' },
+  { tool: 'Checkbox Control', category: 'Expressions & Templates' },
+  { tool: 'Color Control', category: 'Expressions & Templates' },
+  { tool: 'Expression pick whip', category: 'Expressions & Templates' },
+  { tool: 'Essential Graphics', category: 'Expressions & Templates' },
+  { tool: 'MOGRT concept', category: 'Expressions & Templates' },
+  { tool: 'Reusable precomp templates', category: 'Expressions & Templates' },
+
+  // Audio & Export
+  { tool: 'Audio waveform', category: 'Audio & Export' },
+  { tool: 'Markers/beat sync', category: 'Audio & Export' },
+  { tool: 'Whooshes/hits/risers', category: 'Audio & Export' },
+  { tool: 'Ambient sound beds', category: 'Audio & Export' },
+  { tool: 'Export presets', category: 'Audio & Export' },
+  { tool: 'Vertical/horizontal/square exports', category: 'Audio & Export' },
+  { tool: 'Project versioning', category: 'Audio & Export' },
+];
